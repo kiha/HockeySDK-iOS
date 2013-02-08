@@ -36,7 +36,7 @@ typedef enum {
   BITCrashManagerStatusAlwaysAsk = 1,
   BITCrashManagerStatusAutoSend = 2
 } BITCrashManagerStatus;
-static NSString *kBITCrashManagerStatus = @"BITCrashManagerStatus";
+static NSString *const kBITCrashManagerStatus = @"BITCrashManagerStatus";
 
 
 @protocol BITCrashManagerDelegate;
