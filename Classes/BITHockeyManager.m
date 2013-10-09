@@ -305,6 +305,8 @@
 }
 #pragma clang diagnostic pop
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-selector-match"
 + (BOOL)checkJMCConfiguration:(NSDictionary *)configuration {
   return (([configuration isKindOfClass:[NSDictionary class]]) &&
           ([[configuration valueForKey:@"enabled"] boolValue]) &&
@@ -312,6 +314,7 @@
           ([[configuration valueForKey:@"key"] length] > 0) &&
           ([[configuration valueForKey:@"project"] length] > 0));
 }
+#pragma clang diagnostic pop
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
