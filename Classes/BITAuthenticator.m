@@ -604,8 +604,10 @@ static unsigned char kBITPNGEndChunk[4] = {0x49, 0x45, 0x4e, 0x44};
       localizedErrorDescription = @"Failed to retrieve UDID from URL.";
       break;
     }
-    case BITAuthenticatorIdentificationTypeHockeyAppEmail:
     case BITAuthenticatorIdentificationTypeAnonymous:
+      return NO;
+
+    case BITAuthenticatorIdentificationTypeHockeyAppEmail:
     case BITAuthenticatorIdentificationTypeHockeyAppUser:
       NSAssert(NO, @"Should only be called for Device and WebAuth identificationType");
       return NO;
